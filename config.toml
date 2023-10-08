@@ -1,4 +1,5 @@
 baseURL = "https://ceso.github.io/"
+ignoreFiles = ["content/photos"]
 
 DefaultContentLanguage = "en"
 
@@ -20,14 +21,16 @@ canonifyURLs = true
 [permalinks]
   posts = "/posts/:year/:month/:title/"
 
-enableRobotsTXT = false
-enableGitInfo   = true
-enableEmoji     = false
-enableMissingTranslationPlaceholders = false
-disableRSS     = false
-disableSitemap = false
-disable404     = false
-disableHugoGeneratorInject = false
+# Disable for uncompatibility
+#enableRobotsTXT = false
+#enableGitInfo   = true
+#enableMissingTranslationPlaceholders = false
+#disableRSS     = false
+#enableEmoji     = false
+#disableSitemap = false
+#disable404     = false
+#disableHugoGeneratorInject = false
+
 
 [blackfriday]
   hrefTargetBlank = true
@@ -137,6 +140,10 @@ expiryDate = ["expiryDate"]
     identifier = "videos"
     name = "Videos"
     url = "posts/2021/03/my-videos/"
+  [[menu.main]]
+    identifier = "photos"
+    name = "Photos"
+    url = "https://ceso.github.io/photos/"
   [[menu.main]]
     identifier = "about"
     name       = "About"

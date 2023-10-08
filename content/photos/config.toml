@@ -1,0 +1,61 @@
+title = "Photos"
+baseURL = "https://ceso.github.io/photos"
+languageCode = "en-us"
+disableKinds = ["taxonomy", "term"]
+defaultContentLanguage = "en"
+timeZone = "Europe/Berlin"
+theme = "gallery"
+publishDir = "../../ceso.github.io/photos"
+
+[params]
+  title = "My Adventures"
+  description = "Some photos I have taken because why not?"
+  defaultTheme = "dark"
+
+[author]
+  name = "Leandro Lemos"
+
+[outputs]
+  page = ["HTML"]
+  home = ["HTML", "RSS"]
+  section = ["HTML"]
+
+[imaging]
+  resampleFilter = "CatmullRom"
+  quality = 75
+  [imaging.exif]
+    disableDate = false
+    disableLatLong = true
+    includeFields = "ImageDescription"
+
+[module]
+  [module.hugoVersion]
+    extended = false
+    min = "0.112.0"
+  [[module.mounts]]
+    source = "assets"
+    target = "assets"
+  [[module.mounts]]
+    source = "hugo_stats.json"
+    target = "assets/watching/hugo_stats.json"
+
+[build]
+  writeStats = true
+  [[build.cachebusters]]
+    source = "assets/watching/hugo_stats\\.json"
+    target = "styles\\.css"
+  [[build.cachebusters]]
+    source = "(postcss|tailwind)\\.config\\.js"
+    target = "css"
+  [[build.cachebusters]]
+    source = "assets/.*\\.(js)"
+    target = "js"
+  [[build.cachebusters]]
+    source = "assets/.*\\.(.*)$"
+    target = "$1"
+
+[menu]
+[[menu.footer]]
+  name = "GitHub"
+  url = "https://github.com/nicokaiser/hugo-theme-gallery/"
+  weight = 3
