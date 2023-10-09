@@ -6,6 +6,7 @@ defaultContentLanguage = "en"
 timeZone = "Europe/Berlin"
 theme = "gallery"
 publishDir = "../../ceso.github.io/photos"
+timeout = 300
 
 [params]
   title = "My Adventures"
