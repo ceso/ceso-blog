@@ -56,6 +56,6 @@ publishDir = "../../ceso.github.io/photos"
 
 [menu]
 [[menu.footer]]
-  name = "GitHub"
+  name = "Theme by nicokaiser@Github"
   url = "https://github.com/nicokaiser/hugo-theme-gallery/"
   weight = 3
